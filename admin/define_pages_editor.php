@@ -42,7 +42,7 @@
     $page = $_GET['define_it'];
 
     $check_directory = array();
-    $check_directory[] = DIR_FS_CATALOG . DIR_WS_LANGUAGES . $_SESSION['language'] . '/html_includes/';
+    $check_directory[] = DIR_FS_CATALOG_LANGUAGES . $_SESSION['language'] . '/html_includes/';
     $directory_files = zen_display_files();
 
     $za_lookup = array();
@@ -135,7 +135,7 @@
         <td class="pageHeading"><?php echo HEADING_TITLE . '&nbsp;' . $_SESSION['language']; ?> &nbsp;&nbsp;
           <?php
             $check_directory = array();
-            $check_directory[] = DIR_FS_CATALOG . DIR_WS_LANGUAGES . $_SESSION['language'] . '/html_includes/';
+            $check_directory[] = DIR_FS_CATALOG_LANGUAGES . $_SESSION['language'] . '/html_includes/';
             $directory_files = zen_display_files();
 
             $za_lookup = array();

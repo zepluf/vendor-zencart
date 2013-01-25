@@ -29,8 +29,8 @@ class order_total extends base {
 
       reset($module_list);
       while (list(, $value) = each($module_list)) {
-        //include(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/order_total/' . $value);
-        $lang_file = zen_get_file_directory(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/order_total/', $value, 'false');
+        //include(DIR_FS_LANGUAGES . $_SESSION['language'] . '/modules/order_total/' . $value);
+        $lang_file = zen_get_file_directory(DIR_FS_LANGUAGES . $_SESSION['language'] . '/modules/order_total/', $value, 'false');
         if (@file_exists($lang_file)) {
           include_once($lang_file);
         } else {

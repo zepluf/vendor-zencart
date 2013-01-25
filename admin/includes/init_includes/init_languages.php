@@ -32,16 +32,16 @@ if (!defined('IS_ADMIN_FLAG')) {
   $template_dir = $template_query->fields['template_dir'];
 
 // include the language translations
-  require(DIR_WS_LANGUAGES . $_SESSION['language'] . '.php');
+  require(DIR_FS_LANGUAGES . $_SESSION['language'] . '.php');
   $current_page = basename($PHP_SELF);
-  if (file_exists(DIR_WS_LANGUAGES . $_SESSION['language'] . '/' . $current_page)) {
-    include(DIR_WS_LANGUAGES . $_SESSION['language'] . '/' . $current_page);
+  if (file_exists(DIR_FS_LANGUAGES . $_SESSION['language'] . '/' . $current_page)) {
+    include(DIR_FS_LANGUAGES . $_SESSION['language'] . '/' . $current_page);
   }
 
-  if ($za_dir = @dir(DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions')) {
+  if ($za_dir = @dir(DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions')) {
     while ($zv_file = $za_dir->read()) {
       if (preg_match('~^[^\._].*\.php$~i', $zv_file) > 0) {
-        require(DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $zv_file);
+        require(DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $zv_file);
       }
     }
     $za_dir->close();

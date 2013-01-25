@@ -58,8 +58,8 @@ class payment extends base {
       }
 
       for ($i=0, $n=sizeof($include_modules); $i<$n; $i++) {
-        //          include(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/payment/' . $include_modules[$i]['file']);
-        $lang_file = zen_get_file_directory(DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/payment/', $include_modules[$i]['file'], 'false');
+        //          include(DIR_FS_LANGUAGES . $_SESSION['language'] . '/modules/payment/' . $include_modules[$i]['file']);
+        $lang_file = zen_get_file_directory(DIR_FS_LANGUAGES . $_SESSION['language'] . '/modules/payment/', $include_modules[$i]['file'], 'false');
         if (@file_exists($lang_file)) {
           include_once($lang_file);
         } else {

@@ -19,7 +19,7 @@
   // ie: mail, gv_main, coupon_admin... and eventually newsletters too.
   // gets info from query_builder table
 
-  include_once(DIR_WS_LANGUAGES . $_SESSION['language'] . '/' . 'audience.php');  //$current_page
+  include_once(DIR_FS_LANGUAGES . $_SESSION['language'] . '/' . 'audience.php');  //$current_page
   global $db;
   $count_array = array();
   $count=0;

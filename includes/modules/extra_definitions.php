@@ -17,11 +17,11 @@ if (!defined('IS_ADMIN_FLAG')) {
 $template_id = $template_dir;
 
 // set directories to check for language files
-$languages_extra_definitions_directory = DIR_FS_CATALOG . DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/';
-$languages_extra_definitions_directory_template = DIR_FS_CATALOG . DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $template_id . '/';
+$languages_extra_definitions_directory = DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/';
+$languages_extra_definitions_directory_template = DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $template_id . '/';
 
-$ws_languages_extra_definitions_directory = DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/';
-$ws_languages_extra_definitions_directory_template = DIR_WS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $template_id . '/';
+$ws_languages_extra_definitions_directory = DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/';
+$ws_languages_extra_definitions_directory_template = DIR_FS_LANGUAGES . $_SESSION['language'] . '/extra_definitions/' . $template_id . '/';
 
 // Check for new definitions in template directory
 

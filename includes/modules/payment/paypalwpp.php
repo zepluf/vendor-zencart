@@ -97,7 +97,7 @@ class paypalwpp extends base {
    * class constructor
    */
   function paypalwpp() {
-    include_once(zen_get_file_directory(DIR_FS_CATALOG . DIR_WS_LANGUAGES . $_SESSION['language'] . '/modules/payment/', 'paypalwpp.php', 'false'));
+    include_once(zen_get_file_directory(DIR_FS_LANGUAGES . $_SESSION['language'] . '/modules/payment/', 'paypalwpp.php', 'false'));
     global $order;
     $this->code = 'paypalwpp';
     $this->codeTitle = MODULE_PAYMENT_PAYPALWPP_TEXT_ADMIN_TITLE_EC;
@@ -2029,7 +2029,7 @@ class paypalwpp extends base {
         if ($this->new_acct_notify == 'Yes') {
           // require the language file
           global $language_page_directory, $template_dir;
-          if (!isset($language_page_directory)) $language_page_directory = DIR_WS_LANGUAGES . $_SESSION['language'] . '/';
+          if (!isset($language_page_directory)) $language_page_directory = DIR_FS_LANGUAGES . $_SESSION['language'] . '/';
           if (file_exists($language_page_directory . $template_dir . '/create_account.php')) {
             $template_dir_select = $template_dir . '/';
           } else {

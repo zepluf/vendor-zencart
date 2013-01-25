@@ -16,3 +16,5 @@ if (!defined('IS_ADMIN_FLAG')) {
     if (!is_object($logger)) $logger = new logger;
     echo $logger->timer_stop(DISPLAY_PAGE_PARSE_TIME);
   }
+
+include(WEB_DIR . '/backend_application_bottom.php');
