@@ -10,9 +10,9 @@
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
 }
-//echo "I AM LOADING: " . DIR_WS_LANGUAGES . $template_dir_select . $_SESSION['language'] . '.php' . '<br />';
-//require(DIR_WS_LANGUAGES . $template_dir_select . $_SESSION['language'] . '.php');
-//if (!zen_not_null($template_dir_select)) require(DIR_WS_LANGUAGES . $_SESSION['language'] . '.php');
+//echo "I AM LOADING: " . DIR_FS_LANGUAGES . $template_dir_select . $_SESSION['language'] . '.php' . '<br />';
+//require(DIR_FS_LANGUAGES . $template_dir_select . $_SESSION['language'] . '.php');
+//if (!zen_not_null($template_dir_select)) require(DIR_FS_LANGUAGES . $_SESSION['language'] . '.php');
 
 // determine language or template language file
 if (file_exists($language_page_directory . $template_dir . '/' . $current_page_base . '.php')) {
