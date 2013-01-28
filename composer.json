@@ -1,0 +1,10 @@
+{
+    "name": "zepluf/vendor-zencart",
+    "description": "The modified version of \"zencart framework\" to work with zepluf",
+    "type": "zepluf-vendor",
+    "license": "custom",
+    "version": "1.5.1",
+    "require": {
+        "php": ">=5.3.3",
+    }
+}
