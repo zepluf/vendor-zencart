@@ -10,7 +10,7 @@
 define('DIR_WS_CATALOG', $container->getParameter("store.relative_dir") . "/");
 define('DIR_WS_HTTPS_CATALOG', $container->getParameter("store.ssl_relative_dir") . "/");
 
-define('DIR_WS_IMAGES', WEB_DIR . '/images/');
+define('DIR_WS_IMAGES', $container->getParameter("web.relative_dir") . '/images/');
 define('DIR_WS_INCLUDES', 'includes/');
 define('DIR_WS_FUNCTIONS', DIR_WS_INCLUDES . 'functions/');
 define('DIR_WS_CLASSES', DIR_WS_INCLUDES . 'classes/');
@@ -18,7 +18,7 @@ define('DIR_WS_MODULES', DIR_WS_INCLUDES . 'modules/');
 define('DIR_WS_LANGUAGES', 'includes/languages/');
 define('DIR_FS_LANGUAGES', $container->getParameter("store.frontend.languages_dir") . '/');
 define('DIR_WS_DOWNLOAD_PUBLIC', DIR_WS_CATALOG . 'pub/');
-define('DIR_WS_TEMPLATES', APP_DIR . '/frontend/templates/');
+define('DIR_WS_TEMPLATES', $container->get("utility.file")->getRelativePath(ZENCART_DIR, $container->getParameter("store.frontend.templates_dir")) . '/');
 
 define('DIR_WS_PHPBB', '/');
 

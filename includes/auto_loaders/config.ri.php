@@ -7,7 +7,8 @@ $container->get("plugin")->loadPlugins($container);
 // some global vars to be used on Zencart as well
 $request = Request::createFromGlobals();
 
-$core_event = $container->get('storebundle.core_event');
+$core_event = new \Zepluf\Bundle\StoreBundle\Event\CoreEvent();
+$core_event->setRequest($request);
 
 $view = $container->get("view");
 
