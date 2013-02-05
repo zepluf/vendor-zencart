@@ -43,7 +43,7 @@ define('DIR_FS_ADMIN', $container->getParameter("store.zencart_backend_dir") . '
 define('DIR_FS_CATALOG_LANGUAGES', $container->getParameter("store.frontend.languages_dir") . '/');
 define('DIR_FS_CATALOG_IMAGES', DIR_FS_CATALOG . 'images/');
 define('DIR_FS_CATALOG_MODULES', DIR_FS_CATALOG . 'includes/modules/');
-define('DIR_FS_CATALOG_TEMPLATES', DIR_FS_CATALOG . 'includes/templates/');
+define('DIR_FS_CATALOG_TEMPLATES', $container->getParameter("store.frontend.templates_dir") . '/');
 define('DIR_FS_BACKUP', DIR_FS_ADMIN . 'backups/');
 define('DIR_FS_EMAIL_TEMPLATES', DIR_FS_CATALOG . 'email/');
 define('DIR_FS_DOWNLOAD', DIR_FS_CATALOG . 'download/');

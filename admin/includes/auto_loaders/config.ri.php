@@ -12,7 +12,7 @@ $core_event->setRequest($request);
 
 $view = $container->get("view");
 
-$autoLoadConfig[34][] = array(
+$autoLoadConfig[37][] = array(
     'autoType' => 'require',
     'loadFile' => $container->getParameter('kernel.root_dir') . '/backend_routing.php'
 );
