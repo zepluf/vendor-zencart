@@ -12,12 +12,17 @@ $core_event->setRequest($request);
 
 $view = $container->get("view");
 
-$autoLoadConfig[37][] = array(
+$autoLoadConfig[200][] = array(
     'autoType' => 'require',
-    'loadFile' => $container->getParameter('kernel.root_dir') . '/backend_routing.php'
+    'loadFile' => $container->getParameter('kernel.root_dir') . '/init_includes.php'
 );
 
 $autoLoadConfig[200][] = array(
     'autoType' => 'require',
-    'loadFile' => $container->getParameter('kernel.root_dir') . '/init_includes.php'
+    'loadFile' => $container->getParameter('kernel.root_dir') . '/backend_zencart_menus.php'
+);
+
+$autoLoadConfig[201][] = array(
+    'autoType' => 'require',
+    'loadFile' => $container->getParameter('kernel.root_dir') . '/backend_routing.php'
 );
