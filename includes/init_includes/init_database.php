@@ -24,7 +24,7 @@ if (!$db->connect(DB_SERVER, DB_SERVER_USERNAME, DB_SERVER_PASSWORD, DB_DATABASE
   if (file_exists('zc_install/index.php')) {
     header('location: zc_install/index.php');
     exit;
-  } elseif (file_exists($down_for_maint_source)) {
+  } elseif (file_exists(WEB_DIR . '/' . $down_for_maint_source)) {
     if (defined('HTTP_SERVER') && defined('DIR_WS_CATALOG')) {
       header('location: ' . HTTP_SERVER . DIR_WS_CATALOG . $down_for_maint_source );
     } else {
@@ -36,4 +36,3 @@ if (!$db->connect(DB_SERVER, DB_SERVER_USERNAME, DB_SERVER_PASSWORD, DB_DATABASE
     exit;
   }
 }
-?>

@@ -21,7 +21,7 @@ foreach ($autoLoadConfig[110] as $key => $value){
     }
 }
 
-$autoLoadConfig[80][] = array(
+$autoLoadConfig[90][] = array(
     'autoType' => 'require',
     'loadFile' => $container->getParameter('kernel.root_dir') . '/frontend_routing.php'
 );

@@ -7,6 +7,23 @@
  * File Built by zc_install on 2012-08-23 04:22:55
  */
 
+
+/**
+ * WE RECOMMEND THAT YOU USE SSL PROTECTION FOR YOUR ENTIRE ADMIN:
+ * To do that, make sure you use a "https:" URL for BOTH the HTTP_SERVER and HTTPS_SERVER entries:
+ */
+define('HTTP_SERVER', $container->getParameter('store.http_server'));
+define('HTTPS_SERVER', $container->getParameter('store.https_server'));
+define('HTTP_CATALOG_SERVER', $container->getParameter('store.http_server'));
+define('HTTPS_CATALOG_SERVER', $container->getParameter('store.https_server'));
+
+define('ENABLE_SSL', $container->getParameter('store.enable_ssl'));
+
+// secure webserver for admin?  Valid choices are 'true' or 'false' (including quotes).
+define('ENABLE_SSL_ADMIN', $container->getParameter('store.enable_ssl'));
+// secure webserver for storefront?  Valid choices are 'true' or 'false' (including quotes).
+define('ENABLE_SSL_CATALOG', ENABLE_SSL);
+
 define('DIR_WS_CATALOG', $container->getParameter("store.relative_dir") . "/");
 define('DIR_WS_HTTPS_CATALOG', $container->getParameter("store.ssl_relative_dir") . "/");
 
